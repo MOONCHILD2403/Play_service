@@ -49,7 +49,12 @@ This document outlines the available routes in the **Play Service** of the micro
 
     - Error: `404 Not Found` if no similar profiles are found.
 
----
+
+## Database Schema
+
+Below is the database schema for the Play Service:
+
+![Database Schema](./prisma/db_schema.png)
 
 
 # Environment Variables Setup
