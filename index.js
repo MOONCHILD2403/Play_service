@@ -13,7 +13,14 @@ const init = async () => {
 
     const server = Hapi.server({
         port: 3002,
-        host: 'localhost'
+        host: 'localhost',
+        routes: {
+            cors: {
+                origin: ['*'], 
+                headers: ['Accept', 'Authorization', 'Content-Type', 'If-None-Match'], 
+                credentials: true, 
+            },
+        },
     });
 
     await server.register(HapiAuthJwt2);

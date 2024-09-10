@@ -13,7 +13,7 @@ async function handlePostPreference(request, h) {
         });
 
         if (check.length>0) {
-            return h.response({ message: 'Preferences already exist for this user' }).code(409);
+            return h.response({ message: 'Preferences already created' }).code(409);
         }
 
         await prisma.preferences.create({
@@ -50,7 +50,7 @@ async function handlePostPreference(request, h) {
         return h.response({msg:"preferences added successfully"}).code(200);
     }
     catch(err){
-        return h.response({"error":err.message}).code(404);
+        return h.response({"error":err}).code(404);
     }
     
 }

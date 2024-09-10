@@ -47,7 +47,7 @@ async function handleSimilarProfiles(request, h) {
         return h.response(data).code(200);
     }
     catch(err){
-        return h.response({"error":err.message}).code(404);
+        return h.response({"error":err}).code(404);
     }
     
 }
